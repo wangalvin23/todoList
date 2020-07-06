@@ -1,19 +1,17 @@
-// document.addEventListener("keydown", logKey);
-
-// function logKey(e) {
-//   log.textContent += ` ${e.code}`;
-// }
+function todoBullet(todo) {
+  let li = document.createElement("li");
+  li.textContent = todo;
+  return li;
+}
 
 function checkEnter(keyEvent) {
-  //   console.log("keyboardEvent", keyEvent);
   if (keyEvent.key === "Enter") {
-    const inp = keyEvent.target.value;
-    console.log("enter", inp);
-    // if (inp === "") {
-    //   console.log("false");
-    // } else {
-    //   console.log("true");
-    // }
+    let inp = keyEvent.target.value;
+    if (inp !== "") {
+      const todoList = document.getElementById("todoList");
+      todoList.appendChild(todoBullet(inp));
+      keyEvent.target.value = "";
+    }
   }
 }
 

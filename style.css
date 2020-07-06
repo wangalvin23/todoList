@@ -16,3 +16,38 @@ body > .container {
   max-width: 100%;
   width: 1024px;
 }
+
+body > .container > .title {
+  font-size: 64px;
+}
+
+body > .container > .todo > .title {
+  font-size: 32px;
+  padding-bottom: 32px;
+}
+
+body > .container > .todo > label {
+  font-size: 24px;
+}
+
+body > .container > .todo > label > #inputs {
+  font-size: 24px;
+  padding: 8px;
+  border: none;
+}
+
+body > .container > .todo > label > #inputs:required {
+  box-shadow: 0 0 8px red;
+}
+
+body > .container > .todo > label > #inputs:required:focus {
+  box-shadow: 0 0 8px lightgreen;
+}
+
+body > .container > .todo > ul {
+  padding: 24px;
+}
+
+body > .container > .todo > ul > li {
+  font-size: 24px;
+}
